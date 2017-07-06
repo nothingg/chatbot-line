@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 
             
-            if (strpos($text, 'สอนเป็ด') !== false) {
+            if ($text == 'สอนเป็ด') {
 			$messages = [
 				'type' => 'text',
 				'text' => 'ขอบคุณครับที่สอนเป็ด'
