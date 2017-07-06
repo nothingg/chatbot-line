@@ -17,7 +17,21 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 
 			// Build message to reply back
+
+            
+            if (strpos($text, 'สอนเป็ด') !== false) {
 			$messages = [
+				'type' => 'text',
+				'text' => 'ขอบคุณครับที่สอนเป็ด'
+			];
+
+            $messages2 = [
+				'type' => 'sticker',
+				'packageId' => '13',
+                'stickerId' => '1'
+			];
+            }else{
+               $messages = [
 				'type' => 'text',
 				'text' => $text
 			];
@@ -26,7 +40,9 @@ if (!is_null($events['events'])) {
 				'type' => 'sticker',
 				'packageId' => '1',
                 'stickerId' => '1'
-			];
+			]; 
+            }
+
 
 			// Make a POST Request to Messaging API to reply to sender
 			$url = 'https://api.line.me/v2/bot/message/reply';
