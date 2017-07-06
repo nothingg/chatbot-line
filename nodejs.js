@@ -1,6 +1,6 @@
 var express = require('express')
 var bodyParser = require('body-parser')
-var request = require('request')
+/*var request = require('request')
 var app = express()
 
 app.use(bodyParser.json())
@@ -50,4 +50,4 @@ function sendText (sender, text) {
 
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
-})
+})*/
