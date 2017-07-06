@@ -1,1 +1,3 @@
-Hello world
+<?php
+echo "I am a bot";
+?>
